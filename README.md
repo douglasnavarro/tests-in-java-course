@@ -106,7 +106,7 @@ TODO: Inserir imagem
 - Ideal: para cada falha apenas um caso de teste
 
 ### Fases de teste
--Teste de Unidade
+- Teste de Unidade
 	- Aplicado pelo dev
 	- Erro de estrutura de dados, algoritmos incoretos ou simples erros de programação
 - Teste de Integração
@@ -118,3 +118,64 @@ TODO: Inserir imagem
 	- Requisitos não funcionais (segurança, robustez, etc.)
 	- Corretude, completude e coerência
 
+### Qualidade de sw
+
+- Medidas de qualidade, dois grupos:
+
+- Atributos dinãmicos: as características do sistema quando executado
+- Atributos Estáticos: código e documentação
+
+### Atributos de qualidade estática
+- Estrutura do codigo
+- Manutenção
+- Documentação
+- 
+
+###  Atributos de qualidade dinâmica
+- Confiabilidade - sem falha
+- Corretude: requisitos observados
+- Completude: requisitos implementados/incorporados
+- Consistencia: convenções e padrões
+- Usabilidade: simplicidade de uso
+- Performance: tempo de execução/uso de memória
+
+### Confiabilidade: duas definições
+- Propriedade de operar sem falha em um determinado tempo para um determinado uso
+- Propriedade do sistema operar sem falha em um ambiente
+
+### Confiabilidade: uma certeza e um limite
+- Nenhum sistema complexo é **100%** livre de falhas
+
+### Corretude vs Confiança
+
+- Corretude: o programa está correto ou não
+- Confiança: probabilidade do sw falhar
+
+- Testes não garantem **corretude**
+- Corretude deve ser matematicamente demonstrada
+- Não é possível testar todo dominio de entrada
+
+### Teste x Debugar
+
+- Debugar: localizar e corrigir
+- Teste:   processo sistematico de localização de falhas
+
+### O teste de sw visa
+- melhorar a qualidade da aplicação
+- criar uma base de conhecimento
+- corrigir e melhorar processos
+
+### Exercício 1 - Fundamentos
+
+- Suponha um programa P que recebe como entrada um arranjo de inteiros de tamanho 'n' e fornece como saída o arranjo ordenado. Determine:
+1. O domínio de entrada de P
+	- **Resposta**: O domínio de entrada de P é todas as combinações de arranjos de inteiros de tamanho 'n'. É um numero infinito de entradas.
+2. Construa 2 malhas de teste.
+	- **Resposta**: {<(3,2,1)>, (1,2,3)>; <(3,1,6)>, (1,3,6)>}
+- Suponha que o arranjo tenha no max tamanho 10
+a. Qual o tamanho do dominio de entrada de P?
+	- **Resposta**: Infinito, pois não há restrição de quais inteiros compoe o arranjo. Há um numero infinito de inteiros dos quais escolher.
+b. É viável realizar testes exaustivos em P? Justifique
+	- **Resposta**: Não, devido ao tamanho indeterminado do domínio de entrada.
+			Seria interessante realizar testes com arranjos de tamanhos pares e ímpares com inteiros aleatorios. Com 8 casos de teste é possível testar a maior parte das possibilidades de falhas.
+			** É importante conhecer a aplicação **. Considerar caso de tamanho 0, tamanho 1, todos elementos iguais. Para saber que o tamanho do arranjo foi respeitado, é importante ter um teste com tamanho 10.
