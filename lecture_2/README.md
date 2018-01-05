@@ -63,3 +63,54 @@
 	- identificar combinações singulares, inválidas e repetidas
 - Gerar casos de teste e instanciar os testes
 	- um ou mais elementos de D(P) são selecionados com base na especificação dos casos de teste válidas
+
+### Vantagens do teste funcional
+- Pode e deve ser usado em qualquer etapa do desenvolvimento
+- Indiferente a detalhes de implementação
+	- linguagem
+	- habilidade do programador
+	- estrutura de código
+	- ambiente de execução
+- Pode ser automatizado (especificação formal ex. Z)
+- Auxilia na compreensão das próprias especificações aumentand oo conhecimento do sistema
+
+### Desvantagens
+- Qualidade do teste depende da qualidade da especificação
+	- especificação são sujeitas a erros
+	- especificações são feitas, geralmente, em linguagem natural
+
+- Particionamento é uma tarefa difícil e exige
+	- alta capacitação
+	- muita experiência
+- Linguagens formais para especificação são complexas e exigem capacitação
+
+### Exercício
+- Dada a especificação:
+
+Um software realiza operações de +,-,* e / e sobre inteiros e reais. Os operandos devem ser do mesm otipo. Operações sobre inteiros resultam em inteiros sobre reais. A aplicação possui uma interface gráfica com 16 dígitos: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, +, -, *, /, C(clear) e =. As operações são sempre do tipo (operando1 operador operando2 =).
+A aplicação retorna "Error" quando ocorre um erro de operação.
+
+1. Identifique as unidades testáveis independentemente.
+**Resposta**:
+	- Testar a interface: Criar uma cadeia de 16 dígitos e verificar se chega até 16 ou passa de 16.
+	- A adição, subtração, multiplicação e divisão (nenhuma é independente da operação =)
+
+2. Gere um conjunto de caso de testes baseado na especificação.(Entregar)
+
+**Resposta**:
+{<(1,+,2,=),3>; <(2,-,1,=),1>; <(2,*,2,=),4>; <(4,/,2,=),2>; <(5,/,2,=), invalido>; 
+3. Identifique valores limites e singularidades.
+**Resposta**:
+Divisão por 0, 
+
+Baseado em Young e Pezzé
+
+	
+### Teste Estrutural
+
+- A definição dos critérios de teste se dá com base na estrutura da implementação.
+- Critério de parada bem definido.
+- Conhecimento do código: As classes utilizadas para o teste foram as esperadas?
+- Detecção de código frio (código que nunca é executado, ou muito pouco, pode indicar malware!)
+- Também denominado de teste caixa-branca (white-box)
+
