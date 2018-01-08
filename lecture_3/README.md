@@ -29,6 +29,7 @@
 ###  Exercício: Grafo do algoritmo bubblesort
 
 ### Elementos do fluxo alvo de cobertura
+
 	- Teste de comandos
 		- Todos os comandos do codigo devem ser exercitados
 		- Não necessariamente todos os caminhos
