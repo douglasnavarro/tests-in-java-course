@@ -29,34 +29,43 @@
 ###  Exercício: Grafo do algoritmo bubblesort
 
 ### Elementos do fluxo alvo de cobertura
+- Teste de comandos
+	- Todos os comandos do codigo devem ser exercitados
+	- Não necessariamente todos os caminhos
+	- Métrica
+		- C = (#de desvios executados/#de desvios)*100
+- Teste de decisão
+	- DC - Decision Coverage
+	- Toda decisao precisa ser executada para true e false
+	- Decisão: ponto de desvio dno fluxo formado por uma expressão booleana ou que pode ser valorada como true ou false
+		- if(a||b)
+		- while(a)
+		- if(a<4)
+		- a == b && c
+- Teste de condição (CC)
+	- Toda condição em uma expressão booleana deve se rexercitada para valores true e false
 
-	- Teste de comandos
-		- Todos os comandos do codigo devem ser exercitados
-		- Não necessariamente todos os caminhos
-		- Métrica
-			- C = (#de desvios executados/#de desvios)*100
-	- Teste de decisão
-		- DC - Decision Coverage
-		- Toda decisao precisa ser executada para true e false
-		- Decisão: ponto de desvio dno fluxo formado por uma expressão booleana ou que pode ser valorada como true ou false
-			- if(a||b)
-			- while(a)
-			- if(a<4)
-			- a == b && c
-	- Teste de condição (CC)
-		- Toda condição em uma expressão booleana deve se rexercitada para valores true e false
-	
-	- Teste de condição C-DC
-		- Condition-Decision coverage
-		- Toda condição em uma expressão booleana deve ser exercitada para valores true e false
-		- O efeito da valoração da condição deve afetar a decisão apra true e false
-		- Se não afetar a decisão, tem algo errado
+- Teste de condição C-DC
+	- Condition-Decision coverage
+	- Toda condição em uma expressão booleana deve ser exercitada para valores true e false
+	- O efeito da valoração da condição deve afetar a decisão apra true e false
+	- Se não afetar a decisão, tem algo errado
 
-	- Teste de condição - MC/DC (o rei)
-		- Modified condition/decision coverage
-		- cada decisão assume true ou false
-		- cada condição deve afetar a decisão independente das demias
-		- casos de teste são compostos por pares
-			- Exemplo: A B C = S
-				1: T F F = F
-				2: F F F = T
+- Teste de condição - MC/DC (o rei)
+	- Modified condition/decision coverage
+	- cada decisão assume true ou false
+	- cada condição deve afetar a decisão independente das demias
+	- casos de teste são compostos por pares
+		- Exemplo: A B C = S
+			1: T F F = F
+			2: F F F = T
+	- verificamos que a entrada A influencia a entrada
+	- verificamos que esta influencia é independente
+
+- Teste de condição RC/DC
+	- Reinforced condition/decision coverage
+	- Há condições que NÂO podem ocorrer
+	- Aqui cada decisão tem também um significado, como violação de uma regra
+
+- Todos os caminhos
+	- Todos os caminhos devem ser exercitados (equivale ao M-CC) 
