@@ -98,7 +98,11 @@ A aplicação retorna "Error" quando ocorre um erro de operação.
 2. Gere um conjunto de caso de testes baseado na especificação.(Entregar)
 
 **Resposta**:
-{<(1,+,2,=),3>; <(2,-,1,=),1>; <(2,*,2,=),4>; <(4,/,2,=),2>; <(5,/,2,=), invalido>; 
+{<(1,+,2,=),3>;      <(2,-,1,=),1>;     <(2,*,2,=),4>;
+ <(4,/,2,=),2>;      <(5,/,2,=), inv.>; <(1,=,1,=),1>;
+ <(1,+,1.5,=), inv>; <(1,*,2.5,=),inv:; <(3.5,-,2,=),inv>;
+} 
+
 3. Identifique valores limites e singularidades.
 **Resposta**:
 Divisão por 0, 
