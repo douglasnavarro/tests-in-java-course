@@ -1,0 +1,64 @@
+# Aula 3
+
+### Teste estrutural
+
+- Teste estrutural é geralmente utilizado na fase de teste de sistema ou integração
+- O que este teste mostra?
+	- As partes úteis utilizadas pelo software. Eu consigo ver o que está sendo utilizado
+	- Código não utilizado tem de ser eliminado pois não temos como saber seu comportamento
+
+### Grafo
+- O código de uma alicação pode ser descrito na forma de um grafo no qual:
+	- N: conjunto de nós
+	- E: conjunto de arestas
+	- s: nó inicial
+	- o: nó de saída
+	- G=(N,E,s,o)
+- Não sabemos se uma malha é a ideal para encontrar os defeitos, mas uma cobertura de 60 a 70% pode ser considerada razoável.
+- Cada nó representa um estado do sistema, e cada nó inclui um numero de linhas de código. Cobertura não implica liberdade de falhas porque não é possível fazer esta cobertura com todos os valores de entrada possível.
+
+### Caminho
+- Sequência de nós percorridos
+
+### Tipos de caminhos
+- Viáveis
+- Inviáveis
+- Inexistente
+	- não implementado
+
+###  Exercício: Grafo do algoritmo bubblesort
+
+### Elementos do fluxo alvo de cobertura
+- Teste de comandos
+	- Todos os comandos do codigo devem ser exercitados
+	- Não necessariamente todos os caminhos
+	- Métrica
+		- C = (#de desvios executados/#de desvios)*100
+- Teste de decisão
+	- DC - Decision Coverage
+	- Toda decisao precisa ser executada para true e false
+	- Decisão: ponto de desvio dno fluxo formado por uma expressão booleana ou que pode ser valorada como true ou false
+		- if(a||b)
+		- while(a)
+		- if(a<4)
+		- a == b && c
+- Teste de condição (CC)
+	- Toda condição em uma expressão booleana deve se rexercitada para valores true e false
+
+- Teste de condição C-DC
+	- Condition-Decision coverage
+	- Toda condição em uma expressão booleana deve ser exercitada para valores true e false
+	- O efeito da valoração da condição deve afetar a decisão apra true e false
+	- Se não afetar a decisão, tem algo errado
+
+- Teste de condição - MC/DC (o rei)
+	- Modified condition/decision coverage
+	- cada decisão assume true ou false
+	- cada condição deve afetar a decisão independente das demias
+	- casos de teste são compostos por pares
+		- Exemplo: A B C = S
+			1: T F F = F
+			2: F F F = T
+	- verificamos que a entrada A influencia a entrada
+	- verificamos que esta influencia é independente
+	- suponha if(a

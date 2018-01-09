@@ -1,0 +1,40 @@
+package teste;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import aula4.operacoes;
+
+
+public class AllTests {
+	
+	@BeforeClass
+	public static void setupClass() throws Exception 
+	{
+		operacoes.NUMERO = 20;
+	}
+	
+	@Test
+	public void somaTestInt()
+	{
+		operacoes op = new operacoes();
+		assertEquals("Teste de soma inteiros", op.soma(10, 10), 20);
+	}
+	
+	@Test
+	public void subTestInt()
+	{
+		operacoes op = new operacoes();
+		assertEquals("Teste de soma inteiros", op.sub(10, 10), 0);
+	}
+	
+	@Test
+	public void multTestInt()
+	{
+		operacoes op = new operacoes();
+		assertEquals("Teste de soma inteiros", op.mult(10, 10), 100);
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+package cobertura;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = (int) (Math.random()*100);
+		
+		qualquer qq = new qualquer(a);
+	}
+
+}

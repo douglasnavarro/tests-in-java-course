@@ -1,0 +1,11 @@
+package cobertura;
+
+public class qualquer {
+	
+	public void qualquer(int a)
+	{
+		System.out.println("");
+	}
+	
+
+}

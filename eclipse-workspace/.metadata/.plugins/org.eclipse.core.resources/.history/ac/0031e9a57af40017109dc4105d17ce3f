@@ -1,0 +1,28 @@
+package cobertura;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = (int) (Math.random()*100);
+		if(a < 50)
+		{
+			System.out.println("Ok!");
+		}
+		else
+		{
+			System.out.println("NOk!");			
+		}
+
+		if(a > 50)
+		{
+			System.out.println("Ok!");
+		}
+		else
+		{
+			System.out.println("NOk!");			
+		}
+
+	}
+
+}
