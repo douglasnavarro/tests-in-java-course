@@ -88,6 +88,23 @@
 - Limite
 	- nao identifica erros durante situaçoes extremas
 	- deve ser feito no ambiente de execução real
-	- pode ser realizado apenas com aplicação pronta
+	- pode ser realizado apenas com aplicação pronta (é PÓS teste de sistema)
 
-	
+- T de carga
+	- identifica throughput necessario para superar picos
+	- adequa hw e sw
+	- identifica situações de concorrencia
+	- identifica falhas em situaçã ode alta carga
+	- identifica numero de usuarios com os quais a app pode tratar
+- Limites
+	- resultados só podem ser avaliados em relação a outro teste de carga
+
+- T de stress
+	- identifica possiveis corrupçoes de dados
+	- identificar ate uma app pode ir antes de falhar
+	- identificar efeitos colaterais em hw quando da ocorrencia de uma falha
+	- segurança contra ataques via sobrecarga
+- Limites
+	- dificil saber quanto stress deve ser aplicado
+	- o teste pode afetar outros sistemas
+
